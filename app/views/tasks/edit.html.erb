@@ -1,0 +1,14 @@
+<h1>Edit task</h1>
+
+
+<%= form_with model: @tasks do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.select :desired_attribute, ['true', 'false']%>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "List all the tasks", tasks_path %>
