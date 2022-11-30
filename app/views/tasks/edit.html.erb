@@ -1,7 +1,6 @@
 <h1>Edit task</h1>
 
-
-<%= form_with model: @tasks do |f| %>
+<%= render "form", :tasks @tasks %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
@@ -12,3 +11,4 @@
 <% end %>
 
 <%= link_to "List all the tasks", tasks_path %>
+

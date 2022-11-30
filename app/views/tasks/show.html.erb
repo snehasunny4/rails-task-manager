@@ -1,8 +1,10 @@
-<h1><%= @tasks.title %></h1>
-<p> <%= @tasks.details %> </p>
-<p> <%= @tasks.completed %> </p>
+<div class="container w-50 mt-2">
+  <h1 class="border-round"><%= @tasks.title %></h1>
+  <p class="card text-dark bg-light p-3"><%= @tasks.details %></p>
+  <i class="fa-light fa-circle-check"><%= @tasks.completed %></i>
 
 <%= link_to "Back to List", tasks_path%>
 <%= link_to "Add a new task", new_path %>
 <%= link_to "Edit task", edit_path %>
 <%= link_to "Delete", delete_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>
