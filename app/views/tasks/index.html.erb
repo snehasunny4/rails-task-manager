@@ -1,11 +1,13 @@
 <div class="container w-50">
-<h1 class="mt-2 ">My Tasks</h1>
+<h1 class="mt-2 text-success">My Tasks</h1>
 
   <div class="card d-grid gap-2 "><% @tasks.each do |task| %>
-    <ul class="p-2 bg-light"><%= link_to task.title, task_path(task.id)%>
+    <ul class="p-2 bg-light"><%= link_to task.title, task_path(task.id), class:"text-decoration-none text-dark"%>
     </ul>
     <% end %>
   </div>
 
-  <button type="button" class="btn btn-outline-secondary mt-2"><%= link_to "Add a new task", new_path %></button>
+  <button type="button" class="btn btn-outline-success mt-2">
+    <%= link_to "Add a new task", new_path, class:"text-decoration-none text-dark" %>
+  </button>
 </div>
